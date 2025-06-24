@@ -1,0 +1,707 @@
+2025-06-23 16:18:40 Starting ManagerApplication using Java 17.0.2 with PID 54230 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:18:40 The following 1 profile is active: "dev"
+2025-06-23 16:18:40 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:18:40 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:18:40 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:18:40 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:18:40 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:18:40 Starting service [Tomcat]
+2025-06-23 16:18:40 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:18:40 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:18:40 Root WebApplicationContext: initialization completed in 658 ms
+2025-06-23 16:18:41 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:18:41 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:18:41 Started ManagerApplication in 1.811 seconds (process running for 2.28)
+2025-06-23 16:20:00 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:20:00 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:20:00 Completed initialization in 12 ms
+2025-06-23 16:20:00 Init duration for springdoc-openapi is: 85 ms
+2025-06-23 16:21:24 Starting ManagerApplication using Java 17.0.2 with PID 54295 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:21:24 The following 1 profile is active: "dev"
+2025-06-23 16:21:25 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:21:25 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:21:25 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:21:25 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:21:25 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:21:25 Starting service [Tomcat]
+2025-06-23 16:21:25 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:21:25 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:21:25 Root WebApplicationContext: initialization completed in 678 ms
+2025-06-23 16:21:26 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:21:26 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:21:26 Started ManagerApplication in 1.856 seconds (process running for 2.139)
+2025-06-23 16:21:28 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:21:28 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:21:28 Completed initialization in 1 ms
+2025-06-23 16:21:29 Init duration for springdoc-openapi is: 86 ms
+2025-06-23 16:21:57 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:108)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:35)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectUserInfoByUserName(Unknown Source)
+	at com.atguigu.spzx.manager.service.SysUserServiceImpl.login(SysUserServiceImpl.java:35)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:22:03 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:108)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:35)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectUserInfoByUserName(Unknown Source)
+	at com.atguigu.spzx.manager.service.SysUserServiceImpl.login(SysUserServiceImpl.java:35)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:22:04 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:108)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:35)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectUserInfoByUserName(Unknown Source)
+	at com.atguigu.spzx.manager.service.SysUserServiceImpl.login(SysUserServiceImpl.java:35)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:22:19 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:108)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:35)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectUserInfoByUserName(Unknown Source)
+	at com.atguigu.spzx.manager.service.SysUserServiceImpl.login(SysUserServiceImpl.java:35)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:23:20 Starting ManagerApplication using Java 17.0.2 with PID 54336 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:23:20 The following 1 profile is active: "dev"
+2025-06-23 16:23:20 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:23:20 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:23:20 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:23:20 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:23:20 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:23:20 Starting service [Tomcat]
+2025-06-23 16:23:20 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:23:20 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:23:20 Root WebApplicationContext: initialization completed in 656 ms
+2025-06-23 16:23:22 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:23:22 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:23:22 Started ManagerApplication in 2.017 seconds (process running for 2.311)
+2025-06-23 16:23:31 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:23:31 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:23:31 Completed initialization in 3 ms
+2025-06-23 16:23:31 HikariPool-1 - Starting...
+2025-06-23 16:23:31 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1220bf76
+2025-06-23 16:23:31 HikariPool-1 - Start completed.
+2025-06-23 16:23:31 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
+io.lettuce.core.RedisCommandExecutionException: NOAUTH HELLO must be called with the client already authenticated, otherwise the HELLO <proto> AUTH <user> <pass> option can be used to authenticate the client and select the RESP protocol version at the same time
+	at io.lettuce.core.internal.ExceptionFactory.createExecutionException(ExceptionFactory.java:147)
+	at io.lettuce.core.internal.ExceptionFactory.createExecutionException(ExceptionFactory.java:116)
+	at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:120)
+	at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:111)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:747)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:682)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:599)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:24:27 HikariPool-1 - Shutdown initiated...
+2025-06-23 16:24:27 HikariPool-1 - Shutdown completed.
+2025-06-23 16:24:29 Starting ManagerApplication using Java 17.0.2 with PID 54357 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:24:29 The following 1 profile is active: "dev"
+2025-06-23 16:24:29 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:24:29 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:24:29 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:24:30 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:24:30 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:24:30 Starting service [Tomcat]
+2025-06-23 16:24:30 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:24:30 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:24:30 Root WebApplicationContext: initialization completed in 617 ms
+2025-06-23 16:24:30 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:24:30 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:24:30 Started ManagerApplication in 1.642 seconds (process running for 1.925)
+2025-06-23 16:24:35 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:24:35 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:24:35 Completed initialization in 1 ms
+2025-06-23 16:24:35 HikariPool-1 - Starting...
+2025-06-23 16:24:35 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@114f3ef4
+2025-06-23 16:24:35 HikariPool-1 - Start completed.
+2025-06-23 16:24:35 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
+io.lettuce.core.RedisCommandExecutionException: NOAUTH HELLO must be called with the client already authenticated, otherwise the HELLO <proto> AUTH <user> <pass> option can be used to authenticate the client and select the RESP protocol version at the same time
+	at io.lettuce.core.internal.ExceptionFactory.createExecutionException(ExceptionFactory.java:147)
+	at io.lettuce.core.internal.ExceptionFactory.createExecutionException(ExceptionFactory.java:116)
+	at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:120)
+	at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:111)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:747)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:682)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:599)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:25:50 HikariPool-1 - Shutdown initiated...
+2025-06-23 16:25:50 HikariPool-1 - Shutdown completed.
+2025-06-23 16:25:52 Starting ManagerApplication using Java 17.0.2 with PID 54389 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:25:52 The following 1 profile is active: "dev"
+2025-06-23 16:25:52 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:25:52 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:25:52 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:25:52 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:25:52 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:25:52 Starting service [Tomcat]
+2025-06-23 16:25:52 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:25:52 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:25:52 Root WebApplicationContext: initialization completed in 612 ms
+2025-06-23 16:25:53 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:25:53 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:25:53 Started ManagerApplication in 1.678 seconds (process running for 1.984)
+2025-06-23 16:26:04 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:26:04 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:26:04 Completed initialization in 1 ms
+2025-06-23 16:26:04 HikariPool-1 - Starting...
+2025-06-23 16:26:05 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3394da11
+2025-06-23 16:26:05 HikariPool-1 - Start completed.
+2025-06-23 16:30:04 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: 密码不正确] with root cause
+java.lang.RuntimeException: 密码不正确
+	at com.atguigu.spzx.manager.service.SysUserServiceImpl.login(SysUserServiceImpl.java:49)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-23 16:33:59 HikariPool-1 - Shutdown initiated...
+2025-06-23 16:33:59 HikariPool-1 - Shutdown completed.
+2025-06-23 16:34:01 Starting ManagerApplication using Java 17.0.2 with PID 54828 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:34:01 The following 1 profile is active: "dev"
+2025-06-23 16:34:02 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:34:02 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:34:02 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:34:02 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:34:02 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:34:02 Starting service [Tomcat]
+2025-06-23 16:34:02 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:34:02 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:34:02 Root WebApplicationContext: initialization completed in 685 ms
+2025-06-23 16:34:03 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:34:03 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:34:03 Started ManagerApplication in 1.769 seconds (process running for 2.115)
+2025-06-23 16:34:07 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:34:07 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:34:07 Completed initialization in 1 ms
+2025-06-23 16:36:55 Starting ManagerApplication using Java 17.0.2 with PID 54893 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:36:55 The following 1 profile is active: "dev"
+2025-06-23 16:36:55 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:36:55 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:36:55 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:36:55 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:36:55 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:36:55 Starting service [Tomcat]
+2025-06-23 16:36:55 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:36:55 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:36:55 Root WebApplicationContext: initialization completed in 610 ms
+2025-06-23 16:36:56 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:36:56 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:36:56 Started ManagerApplication in 1.64 seconds (process running for 1.976)
+2025-06-23 16:36:59 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:36:59 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:36:59 Completed initialization in 1 ms
+2025-06-23 16:37:57 Starting ManagerApplication using Java 17.0.2 with PID 54951 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:37:57 The following 1 profile is active: "dev"
+2025-06-23 16:37:57 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:37:57 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:37:57 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:37:58 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:37:58 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:37:58 Starting service [Tomcat]
+2025-06-23 16:37:58 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:37:58 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:37:58 Root WebApplicationContext: initialization completed in 606 ms
+2025-06-23 16:37:58 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:37:58 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:37:58 Started ManagerApplication in 1.703 seconds (process running for 1.968)
+2025-06-23 16:38:04 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:38:04 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:38:04 Completed initialization in 1 ms
+2025-06-23 16:38:30 Starting ManagerApplication using Java 17.0.2 with PID 54970 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:38:30 The following 1 profile is active: "dev"
+2025-06-23 16:38:30 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:38:30 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:38:30 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:38:30 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:38:30 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:38:30 Starting service [Tomcat]
+2025-06-23 16:38:30 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:38:30 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:38:30 Root WebApplicationContext: initialization completed in 610 ms
+2025-06-23 16:38:31 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:38:31 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:38:31 Started ManagerApplication in 1.66 seconds (process running for 1.917)
+2025-06-23 16:38:47 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:38:47 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:38:47 Completed initialization in 2 ms
+2025-06-23 16:38:47 Init duration for springdoc-openapi is: 87 ms
+2025-06-23 16:38:56 Starting ManagerApplication using Java 17.0.2 with PID 54984 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:38:56 The following 1 profile is active: "dev"
+2025-06-23 16:38:56 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:38:56 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:38:56 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:38:57 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:38:57 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:38:57 Starting service [Tomcat]
+2025-06-23 16:38:57 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:38:57 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:38:57 Root WebApplicationContext: initialization completed in 654 ms
+2025-06-23 16:38:58 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:38:58 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:38:58 Started ManagerApplication in 2.046 seconds (process running for 2.404)
+2025-06-23 16:39:01 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:39:01 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:39:01 Completed initialization in 1 ms
+2025-06-23 16:39:01 Init duration for springdoc-openapi is: 94 ms
+2025-06-23 16:39:20 HikariPool-1 - Starting...
+2025-06-23 16:39:20 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6461fffc
+2025-06-23 16:39:20 HikariPool-1 - Start completed.
+2025-06-23 16:50:35 HikariPool-1 - Shutdown initiated...
+2025-06-23 16:50:35 HikariPool-1 - Shutdown completed.
+2025-06-23 16:50:38 Starting ManagerApplication using Java 17.0.2 with PID 55218 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-23 16:50:38 The following 1 profile is active: "dev"
+2025-06-23 16:50:39 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-23 16:50:39 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-23 16:50:39 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-23 16:50:39 Tomcat initialized with port(s): 8501 (http)
+2025-06-23 16:50:39 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:50:39 Starting service [Tomcat]
+2025-06-23 16:50:39 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-23 16:50:39 Initializing Spring embedded WebApplicationContext
+2025-06-23 16:50:39 Root WebApplicationContext: initialization completed in 626 ms
+2025-06-23 16:50:40 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-23 16:50:40 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-23 16:50:40 Started ManagerApplication in 1.587 seconds (process running for 1.997)
+2025-06-23 16:50:49 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 16:50:49 Initializing Servlet 'dispatcherServlet'
+2025-06-23 16:50:49 Completed initialization in 1 ms
+2025-06-23 16:50:49 HikariPool-1 - Starting...
+2025-06-23 16:50:50 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4394f3f2
+2025-06-23 16:50:50 HikariPool-1 - Start completed.
+2025-06-23 17:09:22 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s885ms).
+2025-06-23 17:11:56 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m3s802ms).
+2025-06-23 17:15:01 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m5s92ms).
+2025-06-23 17:51:44 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m44s183ms).
+2025-06-23 19:45:12 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m30s573ms).
+2025-06-23 20:09:38 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m25s935ms).
+2025-06-23 21:07:30 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m13s163ms).
+2025-06-23 21:53:45 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m15s539ms).
+2025-06-23 21:57:57 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m11s326ms).
+2025-06-23 22:11:32 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m35s286ms).
+2025-06-23 22:27:27 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s618ms).
+2025-06-23 22:43:27 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s527ms).
+2025-06-23 22:59:53 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s623ms).
+2025-06-23 23:12:24 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m31s832ms).
+2025-06-23 23:30:53 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m58s982ms).
+2025-06-23 23:47:19 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s751ms).
+2025-06-24 00:03:15 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s423ms).
+2025-06-24 00:13:31 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m45s976ms).
+2025-06-24 00:29:56 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s983ms).
+2025-06-24 00:45:51 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s932ms).
+2025-06-24 01:02:16 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s624ms).
+2025-06-24 01:14:20 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m3s956ms).
+2025-06-24 01:30:45 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s969ms).
+2025-06-24 01:46:41 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s607ms).
+2025-06-24 02:03:06 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s585ms).
+2025-06-24 02:19:02 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s655ms).
+2025-06-24 02:35:28 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s665ms).
+2025-06-24 02:51:53 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s514ms).
+2025-06-24 03:07:49 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s657ms).
+2025-06-24 03:24:14 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s992ms).
+2025-06-24 03:36:12 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m28s215ms).
+2025-06-24 03:52:08 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s674ms).
+2025-06-24 04:08:33 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s687ms).
+2025-06-24 04:24:29 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s536ms).
+2025-06-24 04:40:55 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s632ms).
+2025-06-24 04:56:50 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s605ms).
+2025-06-24 05:08:18 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m57s598ms).
+2025-06-24 05:24:14 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s675ms).
+2025-06-24 05:40:39 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s586ms).
+2025-06-24 05:57:05 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s594ms).
+2025-06-24 06:13:00 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s588ms).
+2025-06-24 06:29:26 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s520ms).
+2025-06-24 06:45:21 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s641ms).
+2025-06-24 07:01:47 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s647ms).
+2025-06-24 07:09:26 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m8s528ms).
+2025-06-24 07:25:21 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s617ms).
+2025-06-24 07:41:47 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s685ms).
+2025-06-24 07:57:42 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s951ms).
+2025-06-24 08:10:04 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m52s331ms).
+2025-06-24 08:26:30 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s591ms).
+2025-06-24 08:52:00 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m438ms).
+2025-06-24 08:53:41 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s270ms).
+2025-06-24 09:05:53 HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m12s34ms).
+2025-06-24 09:24:52 HikariPool-1 - Shutdown initiated...
+2025-06-24 09:24:52 HikariPool-1 - Shutdown completed.
+2025-06-24 09:24:54 Starting ManagerApplication using Java 17.0.2 with PID 59283 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-24 09:24:54 The following 1 profile is active: "dev"
+2025-06-24 09:24:55 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-24 09:24:55 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-24 09:24:55 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-06-24 09:24:55 Tomcat initialized with port(s): 8501 (http)
+2025-06-24 09:24:55 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-24 09:24:55 Starting service [Tomcat]
+2025-06-24 09:24:55 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-24 09:24:55 Initializing Spring embedded WebApplicationContext
+2025-06-24 09:24:55 Root WebApplicationContext: initialization completed in 731 ms
+2025-06-24 09:24:56 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-24 09:24:56 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-24 09:24:56 Started ManagerApplication in 1.789 seconds (process running for 2.137)
+2025-06-24 09:25:06 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 09:25:06 Initializing Servlet 'dispatcherServlet'
+2025-06-24 09:25:06 Completed initialization in 2 ms
+2025-06-24 09:25:06 HikariPool-1 - Starting...
+2025-06-24 09:25:06 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cdc4258
+2025-06-24 09:25:06 HikariPool-1 - Start completed.
+2025-06-24 09:26:29 HikariPool-1 - Shutdown initiated...
+2025-06-24 09:26:29 HikariPool-1 - Shutdown completed.
+2025-06-24 09:26:35 Starting ManagerApplication using Java 17.0.2 with PID 59303 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-24 09:26:35 The following 1 profile is active: "dev"
+2025-06-24 09:26:35 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-24 09:26:35 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-24 09:26:35 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-24 09:26:35 Tomcat initialized with port(s): 8501 (http)
+2025-06-24 09:26:35 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-24 09:26:35 Starting service [Tomcat]
+2025-06-24 09:26:35 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-24 09:26:35 Initializing Spring embedded WebApplicationContext
+2025-06-24 09:26:35 Root WebApplicationContext: initialization completed in 735 ms
+2025-06-24 09:26:36 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-24 09:26:36 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-24 09:26:36 Started ManagerApplication in 1.951 seconds (process running for 2.73)
+2025-06-24 09:26:45 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 09:26:45 Initializing Servlet 'dispatcherServlet'
+2025-06-24 09:26:45 Completed initialization in 1 ms
+2025-06-24 09:26:49 HikariPool-1 - Starting...
+2025-06-24 09:26:50 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b679a7
+2025-06-24 09:26:50 HikariPool-1 - Start completed.
+2025-06-24 10:06:26 HikariPool-1 - Shutdown initiated...
+2025-06-24 10:06:26 HikariPool-1 - Shutdown completed.
+2025-06-24 10:06:29 Starting ManagerApplication using Java 17.0.2 with PID 60151 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-24 10:06:29 The following 1 profile is active: "dev"
+2025-06-24 10:06:30 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-24 10:06:30 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-24 10:06:30 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-24 10:06:30 Tomcat initialized with port(s): 8501 (http)
+2025-06-24 10:06:30 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-24 10:06:30 Starting service [Tomcat]
+2025-06-24 10:06:30 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-24 10:06:30 Initializing Spring embedded WebApplicationContext
+2025-06-24 10:06:30 Root WebApplicationContext: initialization completed in 951 ms
+2025-06-24 10:06:31 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-24 10:06:31 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-24 10:06:31 Started ManagerApplication in 2.185 seconds (process running for 3.499)
+2025-06-24 10:07:31 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 10:07:31 Initializing Servlet 'dispatcherServlet'
+2025-06-24 10:07:31 Completed initialization in 4 ms
+2025-06-24 10:41:43 HikariPool-1 - Starting...
+2025-06-24 10:41:44 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5973f644
+2025-06-24 10:41:44 HikariPool-1 - Start completed.
+2025-06-24 11:31:48 HikariPool-1 - Shutdown initiated...
+2025-06-24 11:31:48 HikariPool-1 - Shutdown completed.
+2025-06-24 11:31:52 Starting ManagerApplication using Java 17.0.2 with PID 62302 (/Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent/spzx-manager/target/classes started by wuhanfeng in /Users/wuhanfeng/develop/JavaEE/JavaProject/spzx-parent)
+2025-06-24 11:31:52 The following 1 profile is active: "dev"
+2025-06-24 11:31:53 Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-24 11:31:53 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-24 11:31:53 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-06-24 11:31:53 Tomcat initialized with port(s): 8501 (http)
+2025-06-24 11:31:53 Initializing ProtocolHandler ["http-nio-8501"]
+2025-06-24 11:31:53 Starting service [Tomcat]
+2025-06-24 11:31:53 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-06-24 11:31:53 Initializing Spring embedded WebApplicationContext
+2025-06-24 11:31:53 Root WebApplicationContext: initialization completed in 1014 ms
+2025-06-24 11:31:55 Starting ProtocolHandler ["http-nio-8501"]
+2025-06-24 11:31:55 Tomcat started on port(s): 8501 (http) with context path ''
+2025-06-24 11:31:55 Started ManagerApplication in 2.948 seconds (process running for 4.538)
+2025-06-24 11:32:01 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 11:32:01 Initializing Servlet 'dispatcherServlet'
+2025-06-24 11:32:01 Completed initialization in 1 ms
+2025-06-24 11:32:07 HikariPool-1 - Starting...
+2025-06-24 11:32:07 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38774b04
+2025-06-24 11:32:07 HikariPool-1 - Start completed.
