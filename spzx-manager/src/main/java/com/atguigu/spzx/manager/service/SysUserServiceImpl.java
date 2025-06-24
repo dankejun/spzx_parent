@@ -8,11 +8,15 @@ import com.atguigu.spzx.model.dto.system.LoginDto;
 import com.atguigu.spzx.model.entity.system.SysUser;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.atguigu.spzx.model.vo.system.LoginVo;
+import com.atguigu.spzx.model.vo.system.SysUserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -79,5 +83,24 @@ public class SysUserServiceImpl implements SysUserService {
         loginVo.setToken(token);
 
         return loginVo;
+    }
+
+    @Override
+    public SysUserVo getUserInfo(String token) {
+        SysUserVo sysUserVo = new SysUserVo();
+        String userJson = redisTemplate.opsForValue().get("user:login" + token);
+        SysUser sysUser = JSON.parseObject(userJson, SysUser.class);
+        if (sysUser != null) {
+            sysUserVo.setAvatar(sysUser.getAvatar());
+            sysUserVo.setName(sysUser.getName());
+            sysUserVo.setIntroduction(sysUser.getDescription());
+            sysUserVo.setRoles(Collections.singletonList("admin"));
+        }
+        return sysUserVo;
+    }
+
+    @Override
+    public void logout(String token) {
+        redisTemplate.delete("user:login" + token);
     }
 }
