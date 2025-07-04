@@ -5,10 +5,13 @@ import com.alibaba.fastjson.JSON;
 import com.atguigu.spzx.common.exception.GuiguException;
 import com.atguigu.spzx.manager.mapper.SysUserMapper;
 import com.atguigu.spzx.model.dto.system.LoginDto;
+import com.atguigu.spzx.model.dto.system.SysUserDto;
 import com.atguigu.spzx.model.entity.system.SysUser;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.atguigu.spzx.model.vo.system.LoginVo;
 import com.atguigu.spzx.model.vo.system.SysUserVo;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -17,6 +20,7 @@ import org.springframework.util.DigestUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -102,5 +106,42 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public void logout(String token) {
         redisTemplate.delete("user:login" + token);
+    }
+
+    @Override
+    public PageInfo<SysUser> findByPage(SysUserDto sysUserDto, Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum , pageSize);
+        List<SysUser> sysUserList = sysUserMapper.findByPage(sysUserDto) ;
+        return new PageInfo(sysUserList);
+    }
+
+    @Override
+    public void saveSysUser(SysUser sysUser) {
+        // 根据输入的用户名查询用户
+        SysUser dbSysUser = sysUserMapper.selectByUserName(sysUser.getUserName()) ;
+        if(dbSysUser != null) {
+            throw new GuiguException(ResultCodeEnum.USER_NAME_IS_EXISTS) ;
+        }
+
+        // 对密码进行加密
+        String password = sysUser.getPassword();
+        String digestPassword = DigestUtils.md5DigestAsHex(password.getBytes());
+        sysUser.setPassword(digestPassword);
+        sysUser.setStatus(0);
+        sysUserMapper.saveSysUser(sysUser) ;
+    }
+
+    @Override
+    public void updateSysUser(SysUser sysUser) {
+        SysUser dbSysUser = sysUserMapper.selectByUserName(sysUser.getUserName()) ;
+        if(dbSysUser != null && !dbSysUser.getId().equals(sysUser.getId())) {
+            throw new GuiguException(ResultCodeEnum.USER_NAME_IS_EXISTS) ;
+        }
+        sysUserMapper.updateSysUser(sysUser) ;
+    }
+
+    @Override
+    public void deleteById(Long userId) {
+        sysUserMapper.deleteById(userId) ;
     }
 }
