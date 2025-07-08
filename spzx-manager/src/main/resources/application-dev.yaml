@@ -22,3 +22,8 @@ spzx:
     noAuthUrls:
       - /admin/system/index/login
       - /admin/system/index/generateValidateCode
+  minio:
+    endpointUrl: http://localhost:9000
+    accessKey: admin
+    secreKey: admin123
+    bucketName: spzx-bucket

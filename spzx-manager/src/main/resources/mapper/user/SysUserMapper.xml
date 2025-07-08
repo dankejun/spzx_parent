@@ -76,16 +76,18 @@
         <if test="status != null and status != ''">
             status = #{status},
         </if>
+        <if test="avatar != null and avatar != ''">
+            avatar = #{avatar},
+        </if>
         update_time =  now()
         where
         id = #{id}
     </update>
 
     <update id="deleteById">
-        update sys_user set
-        update_time = now() ,
-        is_deleted = 1
-        where
-        id = #{id}
+        update sys_user
+        set update_time = now(),
+            is_deleted  = 1
+        where id = #{id}
     </update>
 </mapper>
