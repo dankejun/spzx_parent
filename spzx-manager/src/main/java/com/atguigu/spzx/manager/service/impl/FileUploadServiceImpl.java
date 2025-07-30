@@ -1,8 +1,9 @@
-package com.atguigu.spzx.manager.service;
+package com.atguigu.spzx.manager.service.impl;
 
 import cn.hutool.core.date.DateUtil;
 import com.atguigu.spzx.common.exception.GuiguException;
 import com.atguigu.spzx.manager.properties.MinioProperties;
+import com.atguigu.spzx.manager.service.FileUploadService;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;

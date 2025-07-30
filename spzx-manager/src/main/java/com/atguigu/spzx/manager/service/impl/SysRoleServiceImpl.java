@@ -1,7 +1,8 @@
-package com.atguigu.spzx.manager.service;
+package com.atguigu.spzx.manager.service.impl;
 
 import com.atguigu.spzx.manager.mapper.SysRoleMapper;
 import com.atguigu.spzx.manager.mapper.SysRoleUserMapper;
+import com.atguigu.spzx.manager.service.SysRoleService;
 import com.atguigu.spzx.model.dto.system.SysRoleDto;
 import com.atguigu.spzx.model.entity.system.SysRole;
 import com.github.pagehelper.PageHelper;
@@ -19,7 +20,7 @@ import java.util.Map;
  * Description:
  */
 @Service
-public class SysRoleServiceImpl implements SysRoleService{
+public class SysRoleServiceImpl implements SysRoleService {
     @Autowired
     private SysRoleMapper sysRoleMapper;
 
