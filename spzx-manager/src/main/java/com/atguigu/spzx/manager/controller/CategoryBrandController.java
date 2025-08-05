@@ -1,7 +1,8 @@
 package com.atguigu.spzx.manager.controller;
 
-import com.atguigu.spzx.manager.service.BrandService;
-import com.atguigu.spzx.model.entity.product.Brand;
+import com.atguigu.spzx.manager.service.CategoryBrandService;
+import com.atguigu.spzx.model.dto.product.CategoryBrandDto;
+import com.atguigu.spzx.model.entity.product.CategoryBrand;
 import com.atguigu.spzx.model.vo.common.Result;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
 import com.github.pagehelper.PageInfo;
@@ -15,48 +16,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 /**
- * Time: 2025/7/31
+ * Time: 2025/8/4
  * Author: Dankejun
  * Description:
  */
 @RestController
-@RequestMapping(value="/admin/product/brand")
-public class BrandController {
+@RequestMapping(value = "/admin/product/categoryBrand")
+public class CategoryBrandController {
 
     @Autowired
-    private BrandService brandService ;
+    private CategoryBrandService categoryBrandService ;
 
     @GetMapping("/{page}/{limit}")
-    public Result<PageInfo<Brand>> findByPage(@PathVariable Integer page, @PathVariable Integer limit) {
-        PageInfo<Brand> pageInfo = brandService.findByPage(page, limit);
+    public Result<PageInfo<CategoryBrand>> findByPage(@PathVariable Integer page, @PathVariable Integer limit, CategoryBrandDto CategoryBrandDto) {
+        PageInfo<CategoryBrand> pageInfo = categoryBrandService.findByPage(page, limit, CategoryBrandDto);
         return Result.build(pageInfo , ResultCodeEnum.SUCCESS) ;
     }
 
-    @PostMapping("save")
-    public Result save(@RequestBody Brand brand) {
-        brandService.save(brand);
+    @PostMapping("/save")
+    public Result save(@RequestBody CategoryBrand categoryBrand) {
+        categoryBrandService.save(categoryBrand);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
     }
 
     @PutMapping("updateById")
-    public Result updateById(@RequestBody Brand brand) {
-        brandService.updateById(brand);
+    public Result updateById(@RequestBody CategoryBrand categoryBrand) {
+        categoryBrandService.updateById(categoryBrand);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
     }
 
     @DeleteMapping("/deleteById/{id}")
     public Result deleteById(@PathVariable Long id) {
-        brandService.deleteById(id);
+        categoryBrandService.deleteById(id);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
-    }
-
-    // com.atguigu.spzx.manager.controller
-    @GetMapping("/findAll")
-    public Result findAll() {
-        List<Brand> list = brandService.findAll();
-        return Result.build(list , ResultCodeEnum.SUCCESS) ;
     }
 }
