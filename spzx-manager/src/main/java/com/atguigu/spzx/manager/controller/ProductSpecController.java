@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * Time: 2025/8/5
  * Author: Dankejun
@@ -49,5 +51,11 @@ public class ProductSpecController {
     public Result removeById(@PathVariable Long id) {
         productSpecService.deleteById(id);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    @GetMapping("findAll")
+    public Result findAll() {
+        List<ProductSpec> list = productSpecService.findAll();
+        return Result.build(list , ResultCodeEnum.SUCCESS) ;
     }
 }
