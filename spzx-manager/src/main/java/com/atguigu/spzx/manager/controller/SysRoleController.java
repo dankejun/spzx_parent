@@ -3,7 +3,6 @@ package com.atguigu.spzx.manager.controller;
 import com.atguigu.log.annotation.Log;
 import com.atguigu.spzx.manager.service.SysRoleService;
 import com.atguigu.spzx.manager.service.SysUserService;
-import com.atguigu.spzx.model.dto.system.AssginRoleDto;
 import com.atguigu.spzx.model.dto.system.SysRoleDto;
 import com.atguigu.spzx.model.entity.system.SysRole;
 import com.atguigu.spzx.model.vo.common.Result;
