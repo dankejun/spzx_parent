@@ -2,6 +2,7 @@ package com.atguigu.spzx.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Time: 2025/8/18
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Description:
  */
 @SpringBootApplication
+// @ComponentScan(basePackages = {"com.atguigu.spzx"})
 public class ProductApplication {
 
     public static void main(String[] args) {
